@@ -38,7 +38,7 @@ Related PR:
 
 ### Revision
 Related PR:
-[File formatting](https://github.com/tchitrakorn/patient-record-app/pull/5)
+[File formatting](https://github.com/tchitrakorn/patient-record-app/pull/5), [Processing multiple instructions at once](https://github.com/tchitrakorn/patient-record-app/pull/6)
 
 ## Testing
 To run all tests and coverage, `python -m coverage run -m unittest --verbose`. 
