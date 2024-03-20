@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class RecordProcessor:
     def __init__(self):
         """
@@ -11,7 +12,7 @@ class RecordProcessor:
         (3) exams_to_ids - a dictionary that maps exam id to patient id
             Note: There is an assumption that an exam id is unique and can only be mapped to one patient
         """
-        self.ids_to_patients = defaultdict(str) 
+        self.ids_to_patients = defaultdict(str)
         self.ids_to_exams = defaultdict(list)
         self.exams_to_ids = defaultdict(str)
 
@@ -28,7 +29,7 @@ class RecordProcessor:
         argument:
         instruction (str) - a pre-validated string of space-delimited segments
             Note: There is an assumption that all instructions are valid as specified in the assignment instructions
-        
+
         return: None
         """
         # break the instruction down into components
