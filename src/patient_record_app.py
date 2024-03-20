@@ -17,4 +17,8 @@ if __name__ == '__main__':
         processor.process_instruction(instruction.strip())
 
     # print the formatted output after all instructions have been processed
-    pass
+    aggregated_patient_info = processor.aggregate_patient_info()
+    for patient_id, patient_info in aggregated_patient_info.items():
+        patient_name = patient_info['patient_name']
+        exams = patient_info['exams']
+        print(f'Name: {patient_name}, Id: {patient_id}, Exam Count: {len(exams)}')

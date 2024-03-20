@@ -88,4 +88,10 @@ class RecordProcessor:
                         }
         }
         """
-        pass
+        output = defaultdict()
+        for patient_id, patient_name in self.ids_to_patients.items():
+            output[patient_id] = {
+                'patient_name': patient_name,
+                'exams': self.ids_to_exams[patient_id]
+            }
+        return output
