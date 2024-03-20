@@ -8,6 +8,8 @@ Patient Record is a command-line application that processes a set of instruction
 2. [Optional] Put an instructions file (`.txt` format) in the `instructions` folder. Otherwise, a sample one has already been provided.
 3. To process the instructions, enter the following command: `python src/patient_record_app.py instructions/instructions.txt` or `python <app-file-path> <instructions-file-path>` See the sample output below:
 
+![app usage](https://github.com/tchitrakorn/patient-record-app/blob/main/images/patient-record-app-usage.png)
+
 ## Development Process
 ### Project Setup
 First, I setup the project with relevant files and methods, including testing skeletons to get a sense of what each component should behave. 
@@ -35,6 +37,8 @@ Related PR:
 [Unit and end-to-end tests](https://github.com/tchitrakorn/patient-record-app/pull/4)
 
 ### Revision
+Related PR:
+[File formatting](https://github.com/tchitrakorn/patient-record-app/pull/5)
 
 ## Testing
 To run all tests and coverage, `python -m coverage run -m unittest --verbose`. 
@@ -42,8 +46,11 @@ To run all tests and coverage, `python -m coverage run -m unittest --verbose`.
 To get coverage report, `python -m coverage report -m`.
 See below for testing results:
 
+![tests and code coverage](https://github.com/tchitrakorn/patient-record-app/blob/main/images/patient-record-app-testing.png)
+
+
 ## Author's Notes
-* More detailed notes can be found in the comments inside this repo.
-* Test cases are developed accordingly to the provided instructions. Patient Record app currently does not support input validation and all instructions are assumed to be valid.
+* More detailed notes can be found in the comments inside this repo
+* Test cases are developed according to the provided instructions. Patient Record app currently does not support general input validation and all instructions are assumed to be valid
 * Patient IDs and exam IDs are assumed to be unique
 * Output is printed directly to the console (my interpretation based on the instructions sheet). However, for future improvement, it possible to write this output to a file to make it permanent.
