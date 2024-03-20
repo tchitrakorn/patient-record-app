@@ -1,10 +1,7 @@
 import unittest
 from src.record_processor import RecordProcessor
 
-class TestRecordProcessor(unittest.TestCase):
-    """
-    TEST ADD PATIENT
-    """
+class TestAddPatient(unittest.TestCase):
     def test_add_new_patient(self):
         instruction = 'ADD PATIENT 123 JOHN DOE'
         processor = RecordProcessor()
@@ -34,9 +31,8 @@ class TestRecordProcessor(unittest.TestCase):
         }
         self.assertEqual(actual_output, expected_output)
 
-    """
-    TEST ADD EXAM
-    """
+
+class TestAddExam(unittest.TestCase):
     def test_add_exam_to_existing_patient(self):
         instructions = ['ADD PATIENT 123 JOHN DOE', 
                         'ADD EXAM 123 456'
@@ -92,9 +88,8 @@ class TestRecordProcessor(unittest.TestCase):
         }
         self.assertEqual(actual_output, expected_output)
 
-    """
-    TEST DEL PATIENT
-    """
+
+class TestDelPatient(unittest.TestCase):
     def test_delete_existing_patient(self):
         instructions = ['ADD PATIENT 123 JOHN DOE', 
                         'DEL PATIENT 123'
@@ -140,9 +135,8 @@ class TestRecordProcessor(unittest.TestCase):
         }
         self.assertEqual(actual_output, expected_output)
 
-    """
-    TEST DEL EXAM
-    """
+
+class TestDelExam(unittest.TestCase):
     def test_delete_existing_exam(self):
         instructions = ['ADD PATIENT 123 JOHN DOE', 
                         'ADD EXAM 123 456',
