@@ -78,6 +78,13 @@ class RecordProcessor:
                 self.ids_to_exams[patient_id].remove(exam_id)
                 del self.exams_to_ids[exam_id]
 
+    def process_instructions(self, instructions):
+        """
+        process a list of instructions
+        """
+        for instruction in instructions:
+            self.process_instruction(instruction)
+
     def aggregate_patient_info(self):
         """
         return a dictionary containing relevant patient's info split by patient_id
