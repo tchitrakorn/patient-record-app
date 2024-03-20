@@ -7,14 +7,14 @@ if __name__ == '__main__':
 
     # read the instructions file
     instructions_f = open(filename, 'r')
-    instructions = instructions_f.readlines()
+    lines = instructions_f.readlines()
+    instructions = [line.strip() for line in lines]
 
     # initialize RecordProcessor object in order to process instructions
     processor = RecordProcessor()
 
-    # process the instructions one at a time
-    for instruction in instructions:
-        processor.process_instruction(instruction.strip())
+    # process all instructions
+    processor.process_instructions(instructions)
 
     # print the formatted output after all instructions have been processed
     aggregated_patient_info = processor.aggregate_patient_info()

@@ -21,8 +21,7 @@ class TestAddPatient(unittest.TestCase):
                         'ADD PATIENT 123 JANE DOE'
                         ]
         processor = RecordProcessor()
-        for instruction in instructions:
-            processor.process_instruction(instruction)
+        processor.process_instructions(instructions)
         actual_output = processor.aggregate_patient_info()
         expected_output = {
             '123': {
@@ -39,8 +38,7 @@ class TestAddExam(unittest.TestCase):
                         'ADD EXAM 123 456'
                         ]
         processor = RecordProcessor()
-        for instruction in instructions:
-            processor.process_instruction(instruction)
+        processor.process_instructions(instructions)
         actual_output = processor.aggregate_patient_info()
         expected_output = {
             '123': {
@@ -55,8 +53,7 @@ class TestAddExam(unittest.TestCase):
                         'ADD EXAM 125 456'
                         ]
         processor = RecordProcessor()
-        for instruction in instructions:
-            processor.process_instruction(instruction)
+        processor.process_instructions(instructions)
         actual_output = processor.aggregate_patient_info()
         expected_output = {
             '123': {
@@ -73,8 +70,7 @@ class TestAddExam(unittest.TestCase):
                         'ADD EXAM 125 456'
                         ]
         processor = RecordProcessor()
-        for instruction in instructions:
-            processor.process_instruction(instruction)
+        processor.process_instructions(instructions)
         actual_output = processor.aggregate_patient_info()
         expected_output = {
             '123': {
@@ -96,8 +92,7 @@ class TestDelPatient(unittest.TestCase):
                         'DEL PATIENT 123'
                         ]
         processor = RecordProcessor()
-        for instruction in instructions:
-            processor.process_instruction(instruction)
+        processor.process_instructions(instructions)
         actual_output = processor.aggregate_patient_info()
         expected_output = {}
         self.assertEqual(actual_output, expected_output)
@@ -125,8 +120,7 @@ class TestDelPatient(unittest.TestCase):
                         'DEL PATIENT 125'
                         ]
         processor = RecordProcessor()
-        for instruction in instructions:
-            processor.process_instruction(instruction)
+        processor.process_instructions(instructions)
         actual_output = processor.aggregate_patient_info()
         expected_output = {
             '123': {
@@ -144,8 +138,7 @@ class TestDelExam(unittest.TestCase):
                         'ADD EXAM 123 457',
                         'DEL EXAM 456']
         processor = RecordProcessor()
-        for instruction in instructions:
-            processor.process_instruction(instruction)
+        processor.process_instructions(instructions)
         actual_output = processor.aggregate_patient_info()
         expected_output = {
             '123': {
@@ -160,8 +153,7 @@ class TestDelExam(unittest.TestCase):
                         'ADD EXAM 123 456',
                         'DEL EXAM 500']
         processor = RecordProcessor()
-        for instruction in instructions:
-            processor.process_instruction(instruction)
+        processor.process_instructions(instructions)
         actual_output = processor.aggregate_patient_info()
         expected_output = {
             '123': {
