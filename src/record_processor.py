@@ -11,7 +11,9 @@ class RecordProcessor:
         (3) exams_to_ids - a dictionary that maps exam id to patient id
             Note: There is an assumption that an exam id is unique and can only be mapped to one patient
         """
-        pass
+        self.ids_to_patients = defaultdict(str) 
+        self.ids_to_exams = defaultdict(list)
+        self.exams_to_ids = defaultdict(str)
 
     def process_instruction(self, instruction):
         """
